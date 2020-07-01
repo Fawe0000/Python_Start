@@ -5,7 +5,7 @@ class Car:
         self.speed = speed
         self.name = name
         self.is_police = is_police
-zx
+
     def go(self, accelerat=1):
         self.speed = self.speed + accelerat * 10
         print(f"Поехали")
