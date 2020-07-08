@@ -5,7 +5,7 @@ class DevZeroError(Exception):
 try:
     inp_ch = float(input("Введите числитель: "))
     inp_zn = float(input("Введите знаменатель: "))
-    if inp_zn:
+    if not inp_zn:
         raise DevZeroError("Ошибка! На ноль делить нельзя!")
     rez = inp_ch/inp_zn
 except ValueError:
@@ -13,4 +13,4 @@ except ValueError:
 except DevZeroError as err:
     print(err)
 else:
-    print(f"Все хорошо. Ваше число: {rez}")
+    print(f"Все хорошо. {inp_ch:.2f} / {inp_zn:.2f} = {rez:.2f}")
